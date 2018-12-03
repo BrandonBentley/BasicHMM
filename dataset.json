@@ -1,0 +1,968 @@
+{
+  "records": {
+    "ccccc": {
+      "Sun": 0,
+      "Rain": 32
+    },
+    "ccccs": {
+      "Sun": 0,
+      "Rain": 50
+    },
+    "ccccw": {
+      "Sun": 0,
+      "Rain": 2
+    },
+    "cccsc": {
+      "Sun": 0,
+      "Rain": 67
+    },
+    "cccss": {
+      "Sun": 0,
+      "Rain": 80
+    },
+    "cccsw": {
+      "Sun": 0,
+      "Rain": 16
+    },
+    "cccwc": {
+      "Sun": 4,
+      "Rain": 8
+    },
+    "cccws": {
+      "Sun": 1,
+      "Rain": 15
+    },
+    "ccscc": {
+      "Sun": 0,
+      "Rain": 60
+    },
+    "ccscs": {
+      "Sun": 0,
+      "Rain": 65
+    },
+    "ccscw": {
+      "Sun": 0,
+      "Rain": 15
+    },
+    "ccssc": {
+      "Sun": 0,
+      "Rain": 91
+    },
+    "ccsss": {
+      "Sun": 0,
+      "Rain": 124
+    },
+    "ccssw": {
+      "Sun": 1,
+      "Rain": 11
+    },
+    "ccswc": {
+      "Sun": 0,
+      "Rain": 10
+    },
+    "ccsws": {
+      "Sun": 2,
+      "Rain": 21
+    },
+    "ccsww": {
+      "Sun": 2,
+      "Rain": 0
+    },
+    "ccwcc": {
+      "Sun": 0,
+      "Rain": 15
+    },
+    "ccwcs": {
+      "Sun": 1,
+      "Rain": 18
+    },
+    "ccwcw": {
+      "Sun": 2,
+      "Rain": 4
+    },
+    "ccwsc": {
+      "Sun": 0,
+      "Rain": 17
+    },
+    "ccwss": {
+      "Sun": 2,
+      "Rain": 17
+    },
+    "ccwsw": {
+      "Sun": 6,
+      "Rain": 4
+    },
+    "ccwwc": {
+      "Sun": 0,
+      "Rain": 3
+    },
+    "ccwws": {
+      "Sun": 3,
+      "Rain": 11
+    },
+    "ccwww": {
+      "Sun": 7,
+      "Rain": 0
+    },
+    "csccc": {
+      "Sun": 0,
+      "Rain": 79
+    },
+    "csccs": {
+      "Sun": 0,
+      "Rain": 80
+    },
+    "csccw": {
+      "Sun": 0,
+      "Rain": 19
+    },
+    "cscsc": {
+      "Sun": 0,
+      "Rain": 70
+    },
+    "cscss": {
+      "Sun": 0,
+      "Rain": 83
+    },
+    "cscsw": {
+      "Sun": 3,
+      "Rain": 19
+    },
+    "cscwc": {
+      "Sun": 0,
+      "Rain": 15
+    },
+    "cscws": {
+      "Sun": 1,
+      "Rain": 18
+    },
+    "cscww": {
+      "Sun": 0,
+      "Rain": 2
+    },
+    "csscc": {
+      "Sun": 0,
+      "Rain": 55
+    },
+    "csscs": {
+      "Sun": 0,
+      "Rain": 78
+    },
+    "csscw": {
+      "Sun": 3,
+      "Rain": 35
+    },
+    "csssc": {
+      "Sun": 0,
+      "Rain": 99
+    },
+    "cssss": {
+      "Sun": 0,
+      "Rain": 103
+    },
+    "csssw": {
+      "Sun": 0,
+      "Rain": 45
+    },
+    "csswc": {
+      "Sun": 0,
+      "Rain": 22
+    },
+    "cssws": {
+      "Sun": 3,
+      "Rain": 13
+    },
+    "cssww": {
+      "Sun": 12,
+      "Rain": 6
+    },
+    "cswcc": {
+      "Sun": 0,
+      "Rain": 18
+    },
+    "cswcs": {
+      "Sun": 3,
+      "Rain": 8
+    },
+    "cswcw": {
+      "Sun": 1,
+      "Rain": 5
+    },
+    "cswsc": {
+      "Sun": 0,
+      "Rain": 21
+    },
+    "cswss": {
+      "Sun": 2,
+      "Rain": 29
+    },
+    "cswsw": {
+      "Sun": 9,
+      "Rain": 1
+    },
+    "cswwc": {
+      "Sun": 5,
+      "Rain": 0
+    },
+    "cswws": {
+      "Sun": 12,
+      "Rain": 5
+    },
+    "cswww": {
+      "Sun": 18,
+      "Rain": 0
+    },
+    "cwccc": {
+      "Sun": 0,
+      "Rain": 18
+    },
+    "cwccs": {
+      "Sun": 0,
+      "Rain": 27
+    },
+    "cwccw": {
+      "Sun": 0,
+      "Rain": 6
+    },
+    "cwcsc": {
+      "Sun": 7,
+      "Rain": 17
+    },
+    "cwcss": {
+      "Sun": 3,
+      "Rain": 24
+    },
+    "cwcsw": {
+      "Sun": 1,
+      "Rain": 1
+    },
+    "cwcwc": {
+      "Sun": 5,
+      "Rain": 6
+    },
+    "cwcws": {
+      "Sun": 1,
+      "Rain": 1
+    },
+    "cwcww": {
+      "Sun": 3,
+      "Rain": 2
+    },
+    "cwscc": {
+      "Sun": 0,
+      "Rain": 17
+    },
+    "cwscs": {
+      "Sun": 0,
+      "Rain": 28
+    },
+    "cwscw": {
+      "Sun": 6,
+      "Rain": 4
+    },
+    "cwssc": {
+      "Sun": 1,
+      "Rain": 30
+    },
+    "cwsss": {
+      "Sun": 8,
+      "Rain": 28
+    },
+    "cwssw": {
+      "Sun": 18,
+      "Rain": 6
+    },
+    "cwswc": {
+      "Sun": 3,
+      "Rain": 9
+    },
+    "cwsws": {
+      "Sun": 1,
+      "Rain": 0
+    },
+    "cwsww": {
+      "Sun": 15,
+      "Rain": 0
+    },
+    "cwwcc": {
+      "Sun": 1,
+      "Rain": 1
+    },
+    "cwwcs": {
+      "Sun": 3,
+      "Rain": 0
+    },
+    "cwwcw": {
+      "Sun": 7,
+      "Rain": 0
+    },
+    "cwwsc": {
+      "Sun": 5,
+      "Rain": 7
+    },
+    "cwwss": {
+      "Sun": 7,
+      "Rain": 4
+    },
+    "cwwsw": {
+      "Sun": 13,
+      "Rain": 0
+    },
+    "cwwwc": {
+      "Sun": 3,
+      "Rain": 0
+    },
+    "cwwws": {
+      "Sun": 33,
+      "Rain": 3
+    },
+    "cwwww": {
+      "Sun": 42,
+      "Rain": 1
+    },
+    "scccc": {
+      "Sun": 0,
+      "Rain": 52
+    },
+    "scccs": {
+      "Sun": 0,
+      "Rain": 75
+    },
+    "scccw": {
+      "Sun": 0,
+      "Rain": 17
+    },
+    "sccsc": {
+      "Sun": 0,
+      "Rain": 66
+    },
+    "sccss": {
+      "Sun": 0,
+      "Rain": 95
+    },
+    "sccsw": {
+      "Sun": 0,
+      "Rain": 3
+    },
+    "sccwc": {
+      "Sun": 1,
+      "Rain": 8
+    },
+    "sccws": {
+      "Sun": 0,
+      "Rain": 11
+    },
+    "sccww": {
+      "Sun": 2,
+      "Rain": 3
+    },
+    "scscc": {
+      "Sun": 0,
+      "Rain": 92
+    },
+    "scscs": {
+      "Sun": 0,
+      "Rain": 83
+    },
+    "scscw": {
+      "Sun": 0,
+      "Rain": 10
+    },
+    "scssc": {
+      "Sun": 0,
+      "Rain": 106
+    },
+    "scsss": {
+      "Sun": 2,
+      "Rain": 71
+    },
+    "scssw": {
+      "Sun": 4,
+      "Rain": 12
+    },
+    "scswc": {
+      "Sun": 2,
+      "Rain": 16
+    },
+    "scsws": {
+      "Sun": 5,
+      "Rain": 24
+    },
+    "scsww": {
+      "Sun": 13,
+      "Rain": 9
+    },
+    "scwcc": {
+      "Sun": 0,
+      "Rain": 18
+    },
+    "scwcs": {
+      "Sun": 3,
+      "Rain": 15
+    },
+    "scwcw": {
+      "Sun": 4,
+      "Rain": 4
+    },
+    "scwsc": {
+      "Sun": 5,
+      "Rain": 12
+    },
+    "scwss": {
+      "Sun": 13,
+      "Rain": 16
+    },
+    "scwsw": {
+      "Sun": 3,
+      "Rain": 4
+    },
+    "scwwc": {
+      "Sun": 5,
+      "Rain": 0
+    },
+    "scwws": {
+      "Sun": 2,
+      "Rain": 1
+    },
+    "scwww": {
+      "Sun": 15,
+      "Rain": 1
+    },
+    "ssccc": {
+      "Sun": 0,
+      "Rain": 72
+    },
+    "ssccs": {
+      "Sun": 0,
+      "Rain": 79
+    },
+    "ssccw": {
+      "Sun": 1,
+      "Rain": 7
+    },
+    "sscsc": {
+      "Sun": 0,
+      "Rain": 87
+    },
+    "sscss": {
+      "Sun": 1,
+      "Rain": 107
+    },
+    "sscsw": {
+      "Sun": 0,
+      "Rain": 18
+    },
+    "sscwc": {
+      "Sun": 2,
+      "Rain": 18
+    },
+    "sscws": {
+      "Sun": 3,
+      "Rain": 28
+    },
+    "sscww": {
+      "Sun": 11,
+      "Rain": 0
+    },
+    "ssscc": {
+      "Sun": 0,
+      "Rain": 61
+    },
+    "ssscs": {
+      "Sun": 1,
+      "Rain": 115
+    },
+    "ssscw": {
+      "Sun": 4,
+      "Rain": 20
+    },
+    "ssssc": {
+      "Sun": 0,
+      "Rain": 102
+    },
+    "sssss": {
+      "Sun": 1,
+      "Rain": 102
+    },
+    "ssssw": {
+      "Sun": 5,
+      "Rain": 35
+    },
+    "ssswc": {
+      "Sun": 1,
+      "Rain": 38
+    },
+    "sssws": {
+      "Sun": 9,
+      "Rain": 45
+    },
+    "sssww": {
+      "Sun": 23,
+      "Rain": 10
+    },
+    "sswcc": {
+      "Sun": 1,
+      "Rain": 18
+    },
+    "sswcs": {
+      "Sun": 8,
+      "Rain": 33
+    },
+    "sswcw": {
+      "Sun": 13,
+      "Rain": 6
+    },
+    "sswsc": {
+      "Sun": 4,
+      "Rain": 13
+    },
+    "sswss": {
+      "Sun": 14,
+      "Rain": 18
+    },
+    "sswsw": {
+      "Sun": 34,
+      "Rain": 9
+    },
+    "sswwc": {
+      "Sun": 6,
+      "Rain": 4
+    },
+    "sswws": {
+      "Sun": 20,
+      "Rain": 2
+    },
+    "sswww": {
+      "Sun": 52,
+      "Rain": 0
+    },
+    "swccc": {
+      "Sun": 0,
+      "Rain": 14
+    },
+    "swccs": {
+      "Sun": 0,
+      "Rain": 15
+    },
+    "swccw": {
+      "Sun": 2,
+      "Rain": 6
+    },
+    "swcsc": {
+      "Sun": 1,
+      "Rain": 12
+    },
+    "swcss": {
+      "Sun": 1,
+      "Rain": 21
+    },
+    "swcsw": {
+      "Sun": 6,
+      "Rain": 8
+    },
+    "swcwc": {
+      "Sun": 3,
+      "Rain": 2
+    },
+    "swcws": {
+      "Sun": 12,
+      "Rain": 7
+    },
+    "swcww": {
+      "Sun": 17,
+      "Rain": 0
+    },
+    "swscc": {
+      "Sun": 1,
+      "Rain": 12
+    },
+    "swscs": {
+      "Sun": 7,
+      "Rain": 25
+    },
+    "swscw": {
+      "Sun": 3,
+      "Rain": 0
+    },
+    "swssc": {
+      "Sun": 4,
+      "Rain": 25
+    },
+    "swsss": {
+      "Sun": 3,
+      "Rain": 26
+    },
+    "swssw": {
+      "Sun": 21,
+      "Rain": 6
+    },
+    "swswc": {
+      "Sun": 11,
+      "Rain": 12
+    },
+    "swsws": {
+      "Sun": 31,
+      "Rain": 15
+    },
+    "swsww": {
+      "Sun": 33,
+      "Rain": 0
+    },
+    "swwcc": {
+      "Sun": 2,
+      "Rain": 5
+    },
+    "swwcs": {
+      "Sun": 8,
+      "Rain": 3
+    },
+    "swwcw": {
+      "Sun": 16,
+      "Rain": 4
+    },
+    "swwsc": {
+      "Sun": 5,
+      "Rain": 2
+    },
+    "swwss": {
+      "Sun": 36,
+      "Rain": 10
+    },
+    "swwsw": {
+      "Sun": 59,
+      "Rain": 0
+    },
+    "swwwc": {
+      "Sun": 13,
+      "Rain": 0
+    },
+    "swwws": {
+      "Sun": 40,
+      "Rain": 1
+    },
+    "swwww": {
+      "Sun": 91,
+      "Rain": 0
+    },
+    "wcccs": {
+      "Sun": 0,
+      "Rain": 15
+    },
+    "wcccw": {
+      "Sun": 0,
+      "Rain": 2
+    },
+    "wccsc": {
+      "Sun": 0,
+      "Rain": 11
+    },
+    "wccss": {
+      "Sun": 0,
+      "Rain": 21
+    },
+    "wccsw": {
+      "Sun": 6,
+      "Rain": 1
+    },
+    "wccwc": {
+      "Sun": 2,
+      "Rain": 2
+    },
+    "wccws": {
+      "Sun": 1,
+      "Rain": 5
+    },
+    "wccww": {
+      "Sun": 11,
+      "Rain": 0
+    },
+    "wcscc": {
+      "Sun": 0,
+      "Rain": 14
+    },
+    "wcscs": {
+      "Sun": 2,
+      "Rain": 13
+    },
+    "wcscw": {
+      "Sun": 2,
+      "Rain": 6
+    },
+    "wcssc": {
+      "Sun": 1,
+      "Rain": 17
+    },
+    "wcsss": {
+      "Sun": 1,
+      "Rain": 34
+    },
+    "wcssw": {
+      "Sun": 15,
+      "Rain": 0
+    },
+    "wcswc": {
+      "Sun": 3,
+      "Rain": 9
+    },
+    "wcsws": {
+      "Sun": 3,
+      "Rain": 8
+    },
+    "wcsww": {
+      "Sun": 30,
+      "Rain": 0
+    },
+    "wcwcc": {
+      "Sun": 2,
+      "Rain": 5
+    },
+    "wcwcs": {
+      "Sun": 2,
+      "Rain": 3
+    },
+    "wcwcw": {
+      "Sun": 7,
+      "Rain": 1
+    },
+    "wcwsc": {
+      "Sun": 10,
+      "Rain": 3
+    },
+    "wcwss": {
+      "Sun": 15,
+      "Rain": 9
+    },
+    "wcwsw": {
+      "Sun": 20,
+      "Rain": 0
+    },
+    "wcwwc": {
+      "Sun": 10,
+      "Rain": 0
+    },
+    "wcwws": {
+      "Sun": 25,
+      "Rain": 0
+    },
+    "wcwww": {
+      "Sun": 21,
+      "Rain": 0
+    },
+    "wsccc": {
+      "Sun": 0,
+      "Rain": 6
+    },
+    "wsccs": {
+      "Sun": 4,
+      "Rain": 6
+    },
+    "wsccw": {
+      "Sun": 0,
+      "Rain": 7
+    },
+    "wscsc": {
+      "Sun": 4,
+      "Rain": 27
+    },
+    "wscss": {
+      "Sun": 3,
+      "Rain": 22
+    },
+    "wscsw": {
+      "Sun": 11,
+      "Rain": 3
+    },
+    "wscwc": {
+      "Sun": 2,
+      "Rain": 2
+    },
+    "wscws": {
+      "Sun": 13,
+      "Rain": 3
+    },
+    "wscww": {
+      "Sun": 16,
+      "Rain": 0
+    },
+    "wsscc": {
+      "Sun": 3,
+      "Rain": 22
+    },
+    "wsscs": {
+      "Sun": 2,
+      "Rain": 24
+    },
+    "wsscw": {
+      "Sun": 7,
+      "Rain": 2
+    },
+    "wsssc": {
+      "Sun": 2,
+      "Rain": 17
+    },
+    "wssss": {
+      "Sun": 23,
+      "Rain": 23
+    },
+    "wsssw": {
+      "Sun": 24,
+      "Rain": 12
+    },
+    "wsswc": {
+      "Sun": 1,
+      "Rain": 4
+    },
+    "wssws": {
+      "Sun": 18,
+      "Rain": 0
+    },
+    "wssww": {
+      "Sun": 69,
+      "Rain": 0
+    },
+    "wswcc": {
+      "Sun": 4,
+      "Rain": 6
+    },
+    "wswcs": {
+      "Sun": 2,
+      "Rain": 3
+    },
+    "wswcw": {
+      "Sun": 22,
+      "Rain": 2
+    },
+    "wswsc": {
+      "Sun": 7,
+      "Rain": 0
+    },
+    "wswss": {
+      "Sun": 16,
+      "Rain": 4
+    },
+    "wswsw": {
+      "Sun": 39,
+      "Rain": 0
+    },
+    "wswwc": {
+      "Sun": 15,
+      "Rain": 0
+    },
+    "wswws": {
+      "Sun": 50,
+      "Rain": 0
+    },
+    "wswww": {
+      "Sun": 111,
+      "Rain": 0
+    },
+    "wwccc": {
+      "Sun": 4,
+      "Rain": 1
+    },
+    "wwccs": {
+      "Sun": 4,
+      "Rain": 6
+    },
+    "wwccw": {
+      "Sun": 6,
+      "Rain": 0
+    },
+    "wwcsc": {
+      "Sun": 1,
+      "Rain": 2
+    },
+    "wwcss": {
+      "Sun": 9,
+      "Rain": 0
+    },
+    "wwcsw": {
+      "Sun": 5,
+      "Rain": 1
+    },
+    "wwcwc": {
+      "Sun": 3,
+      "Rain": 3
+    },
+    "wwcws": {
+      "Sun": 12,
+      "Rain": 0
+    },
+    "wwcww": {
+      "Sun": 32,
+      "Rain": 0
+    },
+    "wwscc": {
+      "Sun": 2,
+      "Rain": 8
+    },
+    "wwscs": {
+      "Sun": 4,
+      "Rain": 3
+    },
+    "wwscw": {
+      "Sun": 11,
+      "Rain": 0
+    },
+    "wwssc": {
+      "Sun": 13,
+      "Rain": 0
+    },
+    "wwsss": {
+      "Sun": 24,
+      "Rain": 17
+    },
+    "wwssw": {
+      "Sun": 42,
+      "Rain": 0
+    },
+    "wwswc": {
+      "Sun": 13,
+      "Rain": 0
+    },
+    "wwsws": {
+      "Sun": 36,
+      "Rain": 0
+    },
+    "wwsww": {
+      "Sun": 102,
+      "Rain": 0
+    },
+    "wwwcc": {
+      "Sun": 3,
+      "Rain": 0
+    },
+    "wwwcs": {
+      "Sun": 17,
+      "Rain": 0
+    },
+    "wwwcw": {
+      "Sun": 23,
+      "Rain": 0
+    },
+    "wwwsc": {
+      "Sun": 23,
+      "Rain": 0
+    },
+    "wwwss": {
+      "Sun": 35,
+      "Rain": 1
+    },
+    "wwwsw": {
+      "Sun": 125,
+      "Rain": 0
+    },
+    "wwwwc": {
+      "Sun": 38,
+      "Rain": 3
+    },
+    "wwwws": {
+      "Sun": 101,
+      "Rain": 0
+    },
+    "wwwww": {
+      "Sun": 202,
+      "Rain": 0
+    }
+  }
+}
