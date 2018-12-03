@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"io/ioutil"
 	"os"
+	"strconv"
 )
 
 var obervablesPerCycle = 10
@@ -14,6 +15,13 @@ func main() {
 	NoOutput := true
 	if len(os.Args) > 1 {
 		NoOutput = false
+		num, err := strconv.Atoi(os.Args[1])
+		if err == nil {
+			runTimes = num
+		} else {
+			fmt.Println("NAN")
+			os.Exit(1)
+		}
 	}
 	if len(os.Args) > 2 {
 		runTimes = 1000000
