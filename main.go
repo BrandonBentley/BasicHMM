@@ -12,6 +12,7 @@ var obervablesPerCycle = 10
 var runTimes = 100
 
 func main() {
+	correctCount := 0
 	NoOutput := true
 	if len(os.Args) > 1 {
 		NoOutput = false
@@ -42,6 +43,9 @@ func main() {
 		guess := bot.GuessState(obs)
 		bot.NewRecord(obs, exp)
 		if NoOutput {
+			if exp == guess {
+				correctCount++
+			}
 			fmt.Printf("%-11v %-6v %-6v\n", obs, exp, exp == guess)
 		}
 		state = state.Transition()
@@ -49,4 +53,7 @@ func main() {
 	}
 	botData, _ := json.MarshalIndent(bot, "", "  ")
 	ioutil.WriteFile("dataset.json", botData, 0644)
+	if NoOutput {
+		fmt.Printf("\n%v%% Accurate\n", correctCount)
+	}
 }
