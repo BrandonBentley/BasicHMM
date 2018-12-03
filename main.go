@@ -7,10 +7,16 @@ import (
 	"os"
 )
 
+var obervablesPerCycle = 10
+var runTimes = 100
+
 func main() {
 	NoOutput := true
 	if len(os.Args) > 1 {
 		NoOutput = false
+	}
+	if len(os.Args) > 2 {
+		runTimes = 1000000
 	}
 	var state State
 	state = NewSunState()
@@ -21,7 +27,6 @@ func main() {
 		json.Unmarshal(dataJSON, &bot)
 	}
 
-	runTimes := 1000
 	counter := 0
 	for counter != runTimes {
 		obs := state.GetSideEffects()
@@ -29,7 +34,7 @@ func main() {
 		guess := bot.GuessState(obs)
 		bot.NewRecord(obs, exp)
 		if NoOutput {
-			fmt.Printf("%-6v %-6v %-6v\n", obs, exp, exp == guess)
+			fmt.Printf("%-11v %-6v %-6v\n", obs, exp, exp == guess)
 		}
 		state = state.Transition()
 		counter++

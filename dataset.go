@@ -29,8 +29,7 @@ func (b *Bot) GuessState(sideEffects string) string {
 		return "rain"
 	}
 
-	r := rand.Intn(100)
-	if r%2 == 0 {
+	if rand.Intn(100)%2 == 0 {
 		return "sun"
 	}
 	return "rain"
@@ -59,7 +58,7 @@ type SunState struct {
 
 func (s *RainState) GetSideEffects() string {
 	side := ""
-	for i := 0; i < 5; i++ {
+	for i := 0; i < obervablesPerCycle; i++ {
 		side += s.SideEffects[rand.Intn(1000)%10]
 	}
 	return side
@@ -67,14 +66,14 @@ func (s *RainState) GetSideEffects() string {
 
 func (s *SunState) GetSideEffects() string {
 	side := ""
-	for i := 0; i < 5; i++ {
+	for i := 0; i < obervablesPerCycle; i++ {
 		side += s.SideEffects[rand.Intn(1000)%10]
 	}
 	return side
 }
 
 func (s *RainState) Transition() State {
-	val := rand.Intn(9)
+	val := rand.Intn(1000) % 10
 	if val < 4 {
 		return NewRainState()
 	}
@@ -82,7 +81,7 @@ func (s *RainState) Transition() State {
 }
 
 func (s *SunState) Transition() State {
-	val := rand.Intn(9)
+	val := rand.Intn(1000) % 10
 	if val < 6 {
 		return NewRainState()
 	}
