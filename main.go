@@ -54,6 +54,6 @@ func main() {
 	botData, _ := json.MarshalIndent(bot, "", "  ")
 	ioutil.WriteFile("dataset.json", botData, 0644)
 	if NoOutput {
-		fmt.Printf("\n%v%% Accurate\n", correctCount)
+		fmt.Printf("\n%26v: %v\n%26v: %v%%\n", "Total Data Points Recorded", bot.PointCount, "Current Accuracy", correctCount)
 	}
 }

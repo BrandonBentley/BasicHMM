@@ -5,7 +5,8 @@ import (
 )
 
 type Bot struct {
-	Records map[string]StateRecord `json:"records"`
+	PointCount int                    `json:"count"`
+	Records    map[string]StateRecord `json:"records"`
 }
 
 func (b *Bot) NewRecord(sideEffects string, state string) {
@@ -19,6 +20,7 @@ func (b *Bot) NewRecord(sideEffects string, state string) {
 		record.Rain++
 	}
 	b.Records[sideEffects] = record
+	b.PointCount++
 }
 
 func (b *Bot) GuessState(sideEffects string) string {
