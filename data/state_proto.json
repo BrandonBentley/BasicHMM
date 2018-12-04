@@ -1,0 +1,8 @@
+{
+  "numChoices": 4,
+  "states": [
+    "sun",
+    "rain",
+    "clouds"
+  ]
+}

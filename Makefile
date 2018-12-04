@@ -7,4 +7,4 @@ mil: build
 clean:
 	rm dataset.json
 build:
-	go build -o hmm main.go dataset.go
+	go build -o hmm main.go dataset.go generate_states.go

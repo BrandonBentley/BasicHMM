@@ -11,13 +11,17 @@ import (
 
 var obervablesPerCycle = 10
 var runTimes = 100
-var possibleStates []State
-var possibleOBS []string
+var stateData GeneratedStates
+var lengthOfStateSlices = 20
 
 func main() {
 	correctCount := 0
 	NoOutput := true
 	if len(os.Args) > 1 {
+		if os.Args[1] == "gen" {
+			GenerateStates()
+			os.Exit(0)
+		}
 		NoOutput = false
 		num, err := strconv.Atoi(os.Args[1])
 		if err == nil {
@@ -30,8 +34,20 @@ func main() {
 	if len(os.Args) > 2 {
 		runTimes = 1000000
 	}
+	data, _ := ioutil.ReadFile("data/states.json")
+	err := json.Unmarshal(data, &stateData)
+	if err != nil {
+		fmt.Println("Couldn't Initialize States")
+		os.Exit(1)
+	}
 	var state State
-	state = NewState()
+	state = stateData.States[0]
+	// obervablesPerCycle = len(stateData.States) * len(stateData.Obs)
+	// if obervablesPerCycle < 10 {
+	// 	obervablesPerCycle = 10
+	// } else if obervablesPerCycle > 20 {
+	// 	obervablesPerCycle = 20
+	// }
 	bot := NewBot()
 	if dataJSON, err := ioutil.ReadFile("dataset.json"); err == nil {
 		json.Unmarshal(dataJSON, &bot)
@@ -47,7 +63,7 @@ func main() {
 			if exp == guess {
 				correctCount++
 			}
-			fmt.Printf("%-11v %-6v %-6v\n", obs, exp, exp == guess)
+			fmt.Printf("%-25v %-15v %-6v\n", obs, exp, exp == guess)
 		}
 		state = state.Transition()
 		counter++

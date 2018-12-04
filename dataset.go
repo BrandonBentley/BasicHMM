@@ -5,32 +5,22 @@ import (
 )
 
 type Bot struct {
-	PointCount int                       `json:"count"`
-	Records    map[string]map[string]int `json:"records"`
+	PointCount int              `json:"count"`
+	Records    map[string][]int `json:"records"`
 }
 
 func NewBot() *Bot {
 	return &Bot{
-		Records: map[string]map[string]int{},
+		Records: map[string][]int{},
 	}
-}
-
-func NewIntMap() map[string]int {
-	m := map[string]int{}
-	for _, v := range possibleStates {
-		m[v.Name] = 0
-	}
-	return m
 }
 
 func (b *Bot) NewRecord(sideEffects string, state string) {
 	record, ok := b.Records[sideEffects]
 	if !ok {
-		record = NewIntMap()
+		record = make([]int, len(stateData.States))
 	}
-	temp := record[state]
-	temp++
-	record[state] = temp
+	record[stateData.StateKeys[state]]++
 	b.Records[sideEffects] = record
 	b.PointCount++
 }
@@ -38,22 +28,22 @@ func (b *Bot) NewRecord(sideEffects string, state string) {
 func (b *Bot) GuessState(sideEffects string) string {
 	if _, ok := b.Records[sideEffects]; ok {
 		maxVal := -1
-		maxKey := ""
+		maxIndex := 0
 		allZero := true
 		for i, v := range b.Records[sideEffects] {
 			if v > maxVal {
 				maxVal = v
-				maxKey = i
+				maxIndex = i
 			}
 			if v != 0 {
 				allZero = false
 			}
 		}
 		if !allZero {
-			return maxKey
+			return stateData.States[maxIndex].Name
 		}
 	}
-	return possibleStates[rand.Intn(1000)%len(possibleStates)].Name
+	return stateData.States[rand.Intn(1000)%len(stateData.States)].Name
 }
 
 // type State interface {
@@ -63,30 +53,46 @@ func (b *Bot) GuessState(sideEffects string) string {
 // }
 
 type State struct {
-	Name        string
-	SideEffects []string
+	Name          string
+	SideEffects   []string
+	TransitionSet []int
 }
 
 func (s *State) GetSideEffects() string {
 	side := ""
 	for i := 0; i < obervablesPerCycle; i++ {
-		side += s.SideEffects[rand.Intn(1000)%10]
+		side += s.SideEffects[rand.Intn(1000)%lengthOfStateSlices]
 	}
 	return side
 }
 
 func (s *State) Transition() State {
 	// Determine which state to move to based on transition probability
-	return possibleStates[rand.Intn(1000)%len(possibleStates)]
+	return stateData.States[s.TransitionSet[rand.Intn(1000)%lengthOfStateSlices]]
 }
 
 func (s *State) State() string {
 	return s.Name
 }
 
-func NewState() State {
-	return State{
-		Name:        "sun",
-		SideEffects: []string{"c", "w", "w", "w", "w", "w", "w", "s", "s", "s"}, // 1 c, 6 w, 3 s
+func NewState(name string, numStates int, obsSet []string) State {
+	state := State{
+		Name:          name,
+		SideEffects:   make([]string, lengthOfStateSlices),
+		TransitionSet: make([]int, lengthOfStateSlices),
 	}
+	lengthObs := len(obsSet)
+	rand.Seed(rand.Int63())
+	for i, _ := range state.SideEffects {
+		if heavyUP < len(obsSet) && i < 2 {
+			state.SideEffects[i] = obsSet[heavyUP]
+		} else {
+			state.SideEffects[i] = obsSet[rand.Intn(rand.Int())%lengthObs]
+		}
+		state.TransitionSet[i] = rand.Intn(rand.Int()) % numStates
+
+	}
+	// sort.Strings(state.SideEffects)
+	// sort.Ints(state.TransitionSet)
+	return state
 }
