@@ -5,11 +5,14 @@ import (
 	"fmt"
 	"io/ioutil"
 	"os"
+	"sort"
 	"strconv"
 )
 
 var obervablesPerCycle = 10
 var runTimes = 100
+var possibleStates []State
+var possibleOBS []string
 
 func main() {
 	correctCount := 0
@@ -28,17 +31,15 @@ func main() {
 		runTimes = 1000000
 	}
 	var state State
-	state = NewSunState()
-	bot := Bot{
-		Records: map[string]StateRecord{},
-	}
+	state = NewState()
+	bot := NewBot()
 	if dataJSON, err := ioutil.ReadFile("dataset.json"); err == nil {
 		json.Unmarshal(dataJSON, &bot)
 	}
 
 	counter := 0
 	for counter != runTimes {
-		obs := state.GetSideEffects()
+		obs := orderString(state.GetSideEffects())
 		exp := state.State()
 		guess := bot.GuessState(obs)
 		bot.NewRecord(obs, exp)
@@ -56,4 +57,17 @@ func main() {
 	if NoOutput {
 		fmt.Printf("\n%26v: %v\n%26v: %v%%\n", "Total Data Points Recorded", bot.PointCount, "Current Accuracy", correctCount)
 	}
+}
+
+func orderString(s string) string {
+	sorted := ""
+	stringSlice := []string{}
+	for _, v := range s {
+		stringSlice = append(stringSlice, string(v))
+	}
+	sort.Strings(stringSlice)
+	for _, v := range stringSlice {
+		sorted += v
+	}
+	return sorted
 }

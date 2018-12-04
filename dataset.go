@@ -5,60 +5,69 @@ import (
 )
 
 type Bot struct {
-	PointCount int                    `json:"count"`
-	Records    map[string]StateRecord `json:"records"`
+	PointCount int                       `json:"count"`
+	Records    map[string]map[string]int `json:"records"`
+}
+
+func NewBot() *Bot {
+	return &Bot{
+		Records: map[string]map[string]int{},
+	}
+}
+
+func NewIntMap() map[string]int {
+	m := map[string]int{}
+	for _, v := range possibleStates {
+		m[v.Name] = 0
+	}
+	return m
 }
 
 func (b *Bot) NewRecord(sideEffects string, state string) {
 	record, ok := b.Records[sideEffects]
 	if !ok {
-		record = StateRecord{}
+		record = NewIntMap()
 	}
-	if state == "sun" {
-		record.Sun++
-	} else {
-		record.Rain++
-	}
+	temp := record[state]
+	temp++
+	record[state] = temp
 	b.Records[sideEffects] = record
 	b.PointCount++
 }
 
 func (b *Bot) GuessState(sideEffects string) string {
 	if _, ok := b.Records[sideEffects]; ok {
-		if b.Records[sideEffects].Sun > b.Records[sideEffects].Rain {
-			return "sun"
+		maxVal := -1
+		maxKey := ""
+		allZero := true
+		for i, v := range b.Records[sideEffects] {
+			if v > maxVal {
+				maxVal = v
+				maxKey = i
+			}
+			if v != 0 {
+				allZero = false
+			}
 		}
-		return "rain"
+		if !allZero {
+			return maxKey
+		}
 	}
-
-	if rand.Intn(100)%2 == 0 {
-		return "sun"
-	}
-	return "rain"
+	return possibleStates[rand.Intn(1000)%len(possibleStates)].Name
 }
 
-type StateRecord struct {
-	Sun  int
-	Rain int
-}
+// type State interface {
+// 	GetSideEffects() string
+// 	Transition() State
+// 	State() string
+// }
 
-type State interface {
-	GetSideEffects() string
-	Transition() State
-	State() string
-}
-
-type RainState struct {
+type State struct {
 	Name        string
 	SideEffects []string
 }
 
-type SunState struct {
-	Name        string
-	SideEffects []string
-}
-
-func (s *RainState) GetSideEffects() string {
+func (s *State) GetSideEffects() string {
 	side := ""
 	for i := 0; i < obervablesPerCycle; i++ {
 		side += s.SideEffects[rand.Intn(1000)%10]
@@ -66,47 +75,17 @@ func (s *RainState) GetSideEffects() string {
 	return side
 }
 
-func (s *SunState) GetSideEffects() string {
-	side := ""
-	for i := 0; i < obervablesPerCycle; i++ {
-		side += s.SideEffects[rand.Intn(1000)%10]
-	}
-	return side
+func (s *State) Transition() State {
+	// Determine which state to move to based on transition probability
+	return possibleStates[rand.Intn(1000)%len(possibleStates)]
 }
 
-func (s *RainState) Transition() State {
-	val := rand.Intn(1000) % 10
-	if val < 4 {
-		return NewRainState()
-	}
-	return NewSunState()
+func (s *State) State() string {
+	return s.Name
 }
 
-func (s *SunState) Transition() State {
-	val := rand.Intn(1000) % 10
-	if val < 6 {
-		return NewRainState()
-	}
-	return NewRainState()
-}
-
-func (s *RainState) State() string {
-	return "rain"
-}
-
-func (s *SunState) State() string {
-	return "sun"
-}
-
-func NewRainState() State {
-	return &RainState{
-		Name:        "rain",
-		SideEffects: []string{"w", "c", "c", "c", "c", "s", "s", "s", "s", "s"}, // 1 w, 4 c, 5 s
-	}
-}
-
-func NewSunState() State {
-	return &SunState{
+func NewState() State {
+	return State{
 		Name:        "sun",
 		SideEffects: []string{"c", "w", "w", "w", "w", "w", "w", "s", "s", "s"}, // 1 c, 6 w, 3 s
 	}
