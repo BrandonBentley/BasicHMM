@@ -9,7 +9,7 @@ import (
 	"strconv"
 )
 
-var obervablesPerCycle = 10
+var obervablesPerCycle = 15
 var runTimes = 100
 var stateData GeneratedStates
 var lengthOfStateSlices = 20
@@ -42,12 +42,7 @@ func main() {
 	}
 	var state State
 	state = stateData.States[0]
-	// obervablesPerCycle = len(stateData.States) * len(stateData.Obs)
-	// if obervablesPerCycle < 10 {
-	// 	obervablesPerCycle = 10
-	// } else if obervablesPerCycle > 20 {
-	// 	obervablesPerCycle = 20
-	// }
+
 	bot := NewBot()
 	if dataJSON, err := ioutil.ReadFile("dataset.json"); err == nil {
 		json.Unmarshal(dataJSON, &bot)
